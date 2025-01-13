@@ -1,21 +1,24 @@
+import "../styles/globals.css";
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body>
-        <header>
-          <nav className="p-4 bg-gray-900 text-white">
-            <ul className="flex justify-around">
-              <li><a href="/">Home</a></li>
-              <li><a href="/about">About Me</a></li>
-              <li><a href="/projects">Projects</a></li>
-              <li><a href="/blog">Blog</a></li>
-              <li><a href="/contact">Contact</a></li>
+      <body className="flex flex-col min-h-screen">
+        <header className="bg-secondary text-light py-4">
+          <nav className="container mx-auto flex justify-between">
+            <a href="/" className="text-2xl font-bold">Carter Esparza</a>
+            <ul className="flex gap-4">
+              <li><a href="/about" className="hover:text-primary">About</a></li>
+              <li><a href="/projects" className="hover:text-primary">Projects</a></li>
+              <li><a href="/contact" className="hover:text-primary">Contact</a></li>
             </ul>
           </nav>
         </header>
-        <main className="p-8">{children}</main>
-        <footer className="p-4 bg-gray-800 text-center text-white">
-          © {new Date().getFullYear()} Your Name. All rights reserved.
+        <main className="flex-1 container mx-auto p-4">
+          {children}
+        </main>
+        <footer className="bg-dark text-light text-center py-4">
+          © {new Date().getFullYear()} Carter Esparza. All rights reserved.
         </footer>
       </body>
     </html>
