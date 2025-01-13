@@ -57,7 +57,7 @@ export default function ContactPage() {
           </div>
           <button
             type="submit"
-            className="w-full py-3 bg-primary text-light font-bold rounded-lg shadow-md hover:bg-secondary focus:outline-none focus:ring-2 focus:ring-secondary"
+            className="w-full sm:w-auto px-6 py-3 bg-primary text-light font-bold rounded-lg shadow-md hover:bg-secondary focus:outline-none focus:ring-2 focus:ring-secondary"
           >
             Send
           </button>

@@ -17,6 +17,9 @@ body {
     /* Light background for contrast */
     color: #264653;
     /* Text color */
+
+    margin: 0;
+    padding: 0;
 }
 
 footer {

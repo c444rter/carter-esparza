@@ -5,12 +5,12 @@ export default function HomePage() {
       <p className="mt-4 text-lg">
         Hi, I’m <span className="font-bold">Carter Esparza</span>, a Data Analyst.
       </p>
-      <a
-        href="/projects"
-        className="inline-block mt-6 px-6 py-3 bg-primary text-light font-bold rounded-lg shadow-md hover:bg-secondary"
+      <button
+        type="submit"
+        className="w-full sm:w-auto px-6 py-3 bg-primary text-light font-bold rounded-lg shadow-md hover:bg-secondary focus:outline-none focus:ring-2 focus:ring-secondary"
       >
         View My Projects
-      </a>
+      </button>
     </div>
   );
 }
