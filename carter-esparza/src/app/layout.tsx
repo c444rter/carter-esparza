@@ -18,6 +18,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 </Link>
               </li>
               <li>
+                <Link href="/resume" className="hover:text-accent">
+                  Resume
+                </Link>
+              </li>
+              <li>
                 <Link href="/projects" className="hover:text-accent">
                   Projects
                 </Link>
