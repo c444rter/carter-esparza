@@ -2,27 +2,67 @@
 @tailwind components;
 @tailwind utilities;
 
+/* General Reset */
 html,
 body {
     margin: 0;
     padding: 0;
     height: 100%;
-    /* Ensure full height for the layout */
-}
-
-body {
     font-family: 'Arial', sans-serif;
-    /* Set a global font */
-    background-color: #f4f4f4;
-    /* Light background for contrast */
-    color: #264653;
-    /* Text color */
-
-    margin: 0;
-    padding: 0;
+    background-color: #1A1A1A;
+    /* Black background */
+    color: #EDEDED;
+    /* Bone/white text */
+    display: flex;
+    flex-direction: column;
 }
 
+/* Main Content */
+main {
+    flex: 1;
+    /* Ensures main content takes up remaining space */
+}
+
+/* Header */
+header {
+    background-color: #000000;
+    /* Absolute black */
+}
+
+a {
+    color: #EDEDED;
+    /* Default link color */
+    text-decoration: none;
+}
+
+a:hover {
+    color: #FFFFFF;
+    /* Bright white on hover */
+}
+
+/* Footer */
 footer {
+    background-color: #000000;
+    /* Absolute black */
+    color: #EDEDED;
+    /* Bone/white text */
+    text-align: center;
+    padding: 1rem;
     font-size: 0.875rem;
-    /* Slightly smaller font for the footer */
+}
+
+/* Buttons */
+button {
+    background-color: #EDEDED;
+    /* Bone/white button background */
+    color: #000000;
+    /* Black text on buttons */
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #FFFFFF;
+    /* Pure white on hover */
+    color: #000000;
 }

@@ -4,21 +4,27 @@ import Link from "next/link";
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className="flex flex-col min-h-screen">
-        <header className="bg-secondary text-light py-4 px-6 sm:px-12 shadow-lg">
+      <body className="flex flex-col min-h-screen bg-primary text-secondary">
+        {/* Header */}
+        <header className="bg-dark text-light py-4 px-6 sm:px-12">
           <nav className="container mx-auto flex justify-between items-center">
-            <Link href="/" className="text-2xl font-bold">Carter Esparza</Link>
+            <Link href="/" className="text-2xl font-bold hover:text-secondary">
+              Carter Esparza
+            </Link>
             <ul className="flex gap-6 text-sm">
-              <li><Link href="/about" className="hover:text-primary">About</Link></li>
-              <li><Link href="/projects" className="hover:text-primary">Projects</Link></li>
-              <li><Link href="/contact" className="hover:text-primary">Contact</Link></li>
+              <li><Link href="/about" className="hover:text-accent">About</Link></li>
+              <li><Link href="/projects" className="hover:text-accent">Projects</Link></li>
+              <li><Link href="/contact" className="hover:text-accent">Contact</Link></li>
             </ul>
           </nav>
         </header>
-        <main className="flex-1 container mx-auto px-6 sm:px-12 py-8">
+        {/* Main Content */}
+        <main className="flex-1 flex flex-col items-center justify-center text-center px-6">
           {children}
         </main>
-        <footer className="bg-dark text-light text-center py-4">
+
+        {/* Footer */}
+        <footer className="bg-dark text-secondary text-center py-4">
           © {new Date().getFullYear()} Carter Esparza. All rights reserved.
         </footer>
       </body>

@@ -22,48 +22,45 @@ export default function ContactPage() {
       body: JSON.stringify({ email, message }),
     });
 
-    const result = await response.json();
     if (response.ok) {
       setStatus("Message sent successfully!");
     } else {
-      setStatus(`Error: ${result.message}`);
+      setStatus("Error: Unable to send message. Please try again.");
     }
   };
 
   return (
-    <main className="flex-1 flex items-center justify-center">
-      <div className="w-full max-w-2xl bg-white p-8 rounded-lg shadow-md">
-        <h1 className="text-4xl font-bold text-primary text-center">Contact Me</h1>
-        <form onSubmit={handleSubmit} className="mt-8 space-y-6">
-          <div>
-            <label className="block text-sm font-medium text-secondary">Your Email</label>
-            <input
-              type="email"
-              name="email"
-              className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
-              placeholder="example@domain.com"
-              required
-            />
-          </div>
-          <div>
-            <label className="block text-sm font-medium text-secondary">Your Message</label>
-            <textarea
-              name="message"
-              className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
-              rows={5}
-              placeholder="Your message here..."
-              required
-            ></textarea>
-          </div>
-          <button
-            type="submit"
-            className="w-full sm:w-auto px-6 py-3 bg-primary text-light font-bold rounded-lg shadow-md hover:bg-secondary focus:outline-none focus:ring-2 focus:ring-secondary"
-          >
-            Send
-          </button>
-        </form>
-        {status && <p className="mt-4 text-sm text-center text-secondary">{status}</p>}
-      </div>
-    </main>
+    <div className="w-full max-w-lg mx-auto bg-primary p-8 rounded-lg shadow-md">
+      <h1 className="text-4xl font-bold text-light text-center mb-6">Contact Me</h1>
+      <form onSubmit={handleSubmit} className="space-y-6">
+        <div>
+          <label className="block text-sm font-medium text-secondary mb-2">Your Email</label>
+          <input
+            type="email"
+            name="email"
+            className="w-full p-3 border border-accent rounded-lg bg-dark text-secondary focus:outline-none focus:ring-2 focus:ring-light"
+            placeholder="example@domain.com"
+            required
+          />
+        </div>
+        <div>
+          <label className="block text-sm font-medium text-secondary mb-2">Your Message</label>
+          <textarea
+            name="message"
+            className="w-full p-3 border border-accent rounded-lg bg-dark text-secondary focus:outline-none focus:ring-2 focus:ring-light"
+            rows={5}
+            placeholder="Your message here..."
+            required
+          ></textarea>
+        </div>
+        <button
+          type="submit"
+          className="w-full py-3 bg-secondary text-dark font-bold rounded-lg shadow-md hover:bg-light hover:text-dark focus:outline-none focus:ring-2 focus:ring-secondary"
+        >
+          Send
+        </button>
+      </form>
+      {status && <p className="mt-4 text-sm text-center text-secondary">{status}</p>}
+    </div>
   );
 }
