@@ -12,14 +12,27 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               Carter Esparza
             </Link>
             <ul className="flex gap-6 text-sm">
-              <li><Link href="/about" className="hover:text-accent">About</Link></li>
-              <li><Link href="/projects" className="hover:text-accent">Projects</Link></li>
-              <li><Link href="/contact" className="hover:text-accent">Contact</Link></li>
+              <li>
+                <Link href="/about" className="hover:text-accent">
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link href="/projects" className="hover:text-accent">
+                  Projects
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" className="hover:text-accent">
+                  Contact
+                </Link>
+              </li>
             </ul>
           </nav>
         </header>
+
         {/* Main Content */}
-        <main className="flex-1 flex flex-col items-center justify-center text-center px-6">
+        <main className="flex-1 container mx-auto px-6 sm:px-12 py-8">
           {children}
         </main>
 
